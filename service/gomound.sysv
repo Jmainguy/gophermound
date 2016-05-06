@@ -11,6 +11,9 @@
 #  This keeps normal comments in the rest of the file from being
 #  mistaken for tags, should they happen to fit the pattern.>
 
+# chkconfig: 345 99 01
+# description: The GoMound Server
+
 # Source function library.
 . /etc/init.d/functions
 
