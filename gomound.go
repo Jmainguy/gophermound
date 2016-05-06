@@ -86,11 +86,13 @@ func main() {
             connections := zkconnections(zkurl)
             i, err := strconv.Atoi(connections)
             check(err)
-            if i > 0 {
+            // Change this to a reasonable value if we want to serioussly start using this
+            if i > 20000 {
                 var msg = "Warning, too many connections, Connections = " + connections
                 c.String(406, msg)
             } else {
-                c.String(200, connections)
+                var msg = "Connections = " + connections
+                c.String(200, msg)
             }
         } else if validurl[url] {
             f := "/opt/gomound/" + url
