@@ -66,11 +66,11 @@ func main() {
     go func () {
         for {
               // stat
-              zk2file(zkurl, "stat\n", "/tmp/stat")
+              zk2file(zkurl, "stat\n", "/opt/gomound/stat")
               // mntr
-              zk2file(zkurl, "mntr\n", "/tmp/mntr")
+              zk2file(zkurl, "mntr\n", "/opt/gomound/mntr")
               // ruok
-              zk2file(zkurl, "ruok\n", "/tmp/ruok")
+              zk2file(zkurl, "ruok\n", "/opt/gomound/ruok")
               time.Sleep(5 * time.Second)
         }
     }()
@@ -93,7 +93,7 @@ func main() {
                 c.String(200, connections)
             }
         } else if validurl[url] {
-            f := "/tmp/" + url
+            f := "/opt/gomound/" + url
             file, err := ioutil.ReadFile(f)
             check(err)
             message := string(file)

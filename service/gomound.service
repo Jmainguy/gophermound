@@ -4,6 +4,7 @@ After=network.target remote-fs.target nss-lookup.target
 
 [Service]
 Type=simple
+User=gomound
 
 ExecStart=/usr/sbin/gomound
 SuccessExitStatus=2
