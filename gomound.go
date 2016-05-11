@@ -87,7 +87,7 @@ func main() {
             i, err := strconv.Atoi(connections)
             check(err)
             // Change this to a reasonable value if we want to serioussly start using this
-            if i > 20000 {
+            if i > 200 {
                 var msg = "Warning, too many connections, Connections = " + connections
                 c.String(406, msg)
             } else {
