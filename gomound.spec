@@ -3,8 +3,8 @@
 %endif
 %define _unpackaged_files_terminate_build 0
 Name:	gomound
-Version: 0.1	
-Release: 2%{?dist}
+Version: 0.1
+Release: 3%{?dist}
 Summary: A golang daemon to display zookeeper information.
 
 License: GPLv2
